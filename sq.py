@@ -3,7 +3,7 @@ import sqlite3
 conn = sqlite3.connect('movies.db')
 print("Opened database successfully")
 
-conn.execute('''CREATE TABLE MOVIES
+conn.execute('''CREATE TABLE IF NOT EXIST MOVIES
          (ID INT PRIMARY KEY     NOT NULL,
          NAME           TEXT    NOT NULL,
          ACTOR           TEXT    NOT NULL,
